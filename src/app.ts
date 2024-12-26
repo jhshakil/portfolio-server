@@ -8,7 +8,11 @@ const app: Application = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5173"],
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "https://portfolio-admin-beta.vercel.app",
+    ],
     credentials: true,
   })
 );

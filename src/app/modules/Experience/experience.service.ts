@@ -2,7 +2,11 @@ import { Experience } from "@prisma/client";
 import { prisma } from "../../../shared/prisma";
 
 const getAllExperience = async () => {
-  const result = await prisma.experience.findMany();
+  const result = await prisma.experience.findMany({
+    orderBy: {
+      priority: "asc",
+    },
+  });
 
   return result;
 };
