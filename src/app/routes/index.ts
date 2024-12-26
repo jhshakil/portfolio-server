@@ -6,10 +6,15 @@ import { ExperienceRoutes } from "../modules/Experience/experience.routes";
 import { ProjectRoutes } from "../modules/Project/project.routes";
 import { BlogRoutes } from "../modules/Blog/blog.routes";
 import { SocialRoutes } from "../modules/Social/social.routes";
+import { AuthRoutes } from "../modules/Auth/auth.routes";
 
 const router = Router();
 
 const moduleRoutes = [
+  {
+    path: "/auth",
+    route: AuthRoutes,
+  },
   {
     path: "/user",
     route: UserRoutes,
