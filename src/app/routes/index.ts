@@ -7,6 +7,7 @@ import { ProjectRoutes } from "../modules/Project/project.routes";
 import { BlogRoutes } from "../modules/Blog/blog.routes";
 import { SocialRoutes } from "../modules/Social/social.routes";
 import { AuthRoutes } from "../modules/Auth/auth.routes";
+import { HomeRoutes } from "../modules/Home/home.routes";
 
 const router = Router();
 
@@ -42,6 +43,10 @@ const moduleRoutes = [
   {
     path: "/social",
     route: SocialRoutes,
+  },
+  {
+    path: "/home",
+    route: HomeRoutes,
   },
 ];
 
