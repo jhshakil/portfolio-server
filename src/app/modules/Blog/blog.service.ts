@@ -7,10 +7,10 @@ const getAllBlog = async () => {
   return result;
 };
 
-const getBlogById = async (id: string) => {
+const getBlogBySlug = async (slug: string) => {
   const result = await prisma.blog.findUniqueOrThrow({
     where: {
-      id,
+      slug,
     },
   });
 
@@ -48,7 +48,7 @@ const deleteBlog = async (id: string) => {
 
 export const BlogServices = {
   getAllBlog,
-  getBlogById,
+  getBlogBySlug,
   createBlog,
   updateBlog,
   deleteBlog,

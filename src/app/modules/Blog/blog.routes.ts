@@ -8,7 +8,7 @@ import { BlogValidations } from "./blog.validation";
 const router = Router();
 
 router.get("/", BlogControllers.getAllBlog);
-router.get("/:id", BlogControllers.getBlogById);
+router.get("/:slug", BlogControllers.getBlogBySlug);
 router.post(
   "/",
   auth(UserRole.ADMIN),

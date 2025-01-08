@@ -12,8 +12,8 @@ const getAllBlog = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-const getBlogById = catchAsync(async (req: Request, res: Response) => {
-  const result = await BlogServices.getBlogById(req.params.id);
+const getBlogBySlug = catchAsync(async (req: Request, res: Response) => {
+  const result = await BlogServices.getBlogBySlug(req.params.slug);
 
   sendResponse(res, {
     message: "Blog Get Successfully",
@@ -49,7 +49,7 @@ const deleteBlog = catchAsync(async (req: Request, res: Response) => {
 
 export const BlogControllers = {
   getAllBlog,
-  getBlogById,
+  getBlogBySlug,
   createBlog,
   updateBlog,
   deleteBlog,
