@@ -8,6 +8,7 @@ import { BlogRoutes } from "../modules/Blog/blog.routes";
 import { SocialRoutes } from "../modules/Social/social.routes";
 import { AuthRoutes } from "../modules/Auth/auth.routes";
 import { HomeRoutes } from "../modules/Home/home.routes";
+import { ContactRouters } from "../modules/contact/contact.route";
 
 const router = Router();
 
@@ -47,6 +48,10 @@ const moduleRoutes = [
   {
     path: "/home",
     route: HomeRoutes,
+  },
+  {
+    path: "/contact",
+    route: ContactRouters,
   },
 ];
 
